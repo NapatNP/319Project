@@ -2,15 +2,12 @@ import React from 'react';
 import './home.css'
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
-import image1 from './images/image(1).png';
-import image2 from './images/image(2).png';
-import image3 from './images/image(3).png';
 const divStyle = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   backgroundSize: 'cover',
-  height: '500px'
+  height: '550px'
 }
 const properties = {
   duration: 5000,
@@ -22,15 +19,15 @@ const properties = {
 
 const slideImages = [
   {
-    url: image1,
+    url: './images/image1.png',
     caption: 'Slide 1'
   },
   {
-    url: image2,
+    url: './images/image2.png',
     caption: 'Slide 2'
   },
   {
-    url: image3,
+    url: './images/image3.png',
     caption: 'Slide 3'
   },
 ];
