@@ -10,15 +10,12 @@ body {
   font-family: 'IBM Plex Sans Thai', sans-serif;
 }
 
-.container {
+.navbar {
   max-width: 80%;
-  margin: auto;
-}
-
-.flex {
   display: flex;
   justify-content: space-between;
-  align-items:  center;
+  align-items: center;
+  margin: auto;
 }
 
 a {
@@ -30,24 +27,42 @@ a {
 ul {
   list-style-type: none;
 }
-
+.button {
+  display: flex;
+  align-items: center;
+}
+.button #menu-icon{
+  margin-left: 30px;
+}
 button {
   border-radius: 5px;
-  padding: 17px 30px;
+  padding: 10px 20px;
   background-color: orange;
   border: none;
   color: white;
   cursor: pointer;
   font-weight: bold;
   font-size: 15px;
+  margin-left: 30px;
   display: flex;
   align-items: center;
 }
 
-button i{
+button i {
   font-size: 25px;
   font-weight: 300;
   padding-right: 5px;
+}
+
+#menu-icon {
+  font-size: 1.5rem;
+  padding: 10px;
+  z-index: 1001;
+  cursor: pointer;
+  background: orange;
+  border-radius: 3px;
+  color: white;
+  display: none;
 }
 
 header {
@@ -61,17 +76,17 @@ header {
   height: 90px;
 }
 
-header a{
-  margin-left: 60px;
+header a {
+  margin-left: 10px;
   transition: 0.5s;
   font-weight: 500;
 }
 
-header a:hover{
+header a:hover {
   color: orange;
 }
 
-header span{
+header span {
   width: auto;
   padding: 0 6px;
   background-color: orange;
@@ -83,4 +98,100 @@ header span{
 header h4 {
   font-weight: 500;
   margin-right: 20px;
+}
+.nav-links {
+  display: flex;
+
+}
+
+li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding-top: 1rem;
+  padding-left: 2rem;
+}
+
+li a {
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:1065px) {
+  #menu-icon {
+    display: block;
+    transition: all .4s ease;
+  }
+
+  #menu-icon.bx-x {
+    transform: rotate(-180deg);
+  }
+
+  .nav-links {
+    display: flex;
+    position: absolute;
+    top: -1000%;
+    right: 0;
+    left: 0;
+    background: white;
+    flex-direction: column;
+    text-align: left;
+    padding: 0 5%;
+    transition: all .45s ease;
+  }
+
+  .nav-links.open {
+    top: 100%;
+  }
+
+  .nav-links li a{
+    align-items: start;
+    font-size: 25px;
+    padding-bottom: 2px;
+  }
+
+
+
+
+
+
+
+
+
 }
