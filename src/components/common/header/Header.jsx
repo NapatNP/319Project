@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect} from "react";
 import './header.css'
 /* import { Link } from 'react-router-dom' */
 /* import { nav } from '../../data/Data' */
@@ -43,7 +43,7 @@ const Header = () => {
 
             <div className="navbar">
                 <div className="logo">
-                    <h1>Res <span>Q</span> connect</h1>
+                    <h1><a href="index.html">Res <span>Q</span> connect</a></h1>
                 </div>
                 <div className="button" >
                     <ul className="nav-links ">
@@ -52,8 +52,11 @@ const Header = () => {
                         <li><a href="/เกี่ยวกับเรา">เกี่ยวกับเรา</a></li>
                         <li><a href="/ช่องทางติดต่อ">ช่องทางติดต่อ</a></li>
                     </ul>
-                    <button className="btn1">
+                    <button className="btn">
                         <i class='bx bx-log-in-circle'></i><p>Sign In</p>
+                    </button>
+                    <button className="btn">
+                        <i class='bx bx-log-in'></i><p>Log In</p>
                     </button>
                     <div id="menu-icon" class="bx bx-menu"></div>
                 </div>
