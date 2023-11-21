@@ -62,7 +62,7 @@ header {
 }
 
 header a{
-  margin-left: 30px;
+  margin-left: 60px;
   transition: 0.5s;
   font-weight: 500;
 }
@@ -77,7 +77,6 @@ header span{
   background-color: orange;
   border-radius: 50px;
   color: white;
-  margin-right: 4px;
   font-weight: 400;
 }
 

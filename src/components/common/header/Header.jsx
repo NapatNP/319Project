@@ -19,9 +19,6 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="button flex">
-                    <h4>
-                        <span>2</span> Mylist
-                    </h4>
                     <button className="btn1">
                         <i class='bx bx-log-in-circle'></i><p>Sign In</p> 
                     </button>
