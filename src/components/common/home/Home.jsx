@@ -7,7 +7,7 @@ const divStyle = {
   alignItems: 'center',
   justifyContent: 'center',
   backgroundSize: 'cover',
-  height: '550px'
+  height: '550px',
 }
 const properties = {
   duration: 5000,

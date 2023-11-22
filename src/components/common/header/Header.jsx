@@ -6,14 +6,14 @@ import './header.css'
 const Header = () => {
     useEffect(() => {
         // ฟังก์ชันที่จะถูกเรียกเมื่อเกิดเหตุการณ์ scroll
-        const handleScroll = () => {
+ /*        const handleScroll = () => {
             let menuLi = document.querySelectorAll('nav ul li a');
             let section = document.querySelectorAll('section');
             let len = section.length;
             while (--len && window.scrollY + 97 < section[len].offsetTop) { }
             menuLi.forEach(sec => sec.classList.remove('active'));
             menuLi[len].classList.add("active");
-        };
+        }; */
         const handleClick = () => {
             let menuIcon = document.querySelector("#menu-icon");
             let navlist = document.querySelector('.nav-links');
@@ -29,12 +29,12 @@ const Header = () => {
             };
         };
         // เพิ่ม event listener สำหรับ scroll event เมื่อ component ถูก render
-        window.addEventListener('scroll', handleScroll);
-        handleClick();
+/*         window.addEventListener('scroll', handleScroll);
+ */        handleClick();
         // ฟังก์ชันที่จะถูกเรียกเมื่อ component ถูก unmount เพื่อลบ event listener
-        return () => {
+   /*      return () => {
             window.removeEventListener('scroll', handleScroll);
-        };
+        }; */
 
     }, []); // ให้ useEffect รันเพียงครั้งเมื่อ component ถูก render ครั้งแรกเท่านั้น
 
