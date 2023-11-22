@@ -2,6 +2,7 @@ import React from 'react';
 import './home.css'
 import { Slide } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
+
 const divStyle = {
   display: 'flex',
   alignItems: 'center',
@@ -9,6 +10,7 @@ const divStyle = {
   backgroundSize: 'cover',
   height: '550px'
 }
+
 const properties = {
   duration: 5000,
   transitionDuration: 500,
