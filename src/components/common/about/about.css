@@ -59,4 +59,85 @@
     text-align: center;
     color: #888;
   }
-  
+
+/* css อันใหม่ */  
+/* Hero Section Style */
+.hero--section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 133.333px 85.333px 133.333px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  background-color: var(--bg-shade);
+}
+.hero--section--content-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+}
+.hero--section--content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 21.333px;
+}
+.hero--section--content--box > button {
+  margin-top: 21.333px;
+}
+.hero--section--title {
+  color: var(--heading-color);
+  font-size: 74.667px;
+  font-weight: 700;
+  line-height: 90px;
+  align-self: stretch;
+}
+.hero--section--title--color {
+  color: var(--primary);
+}
+.hero--section-description {
+  color: var(--darkblue);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+}
+.hero--section--img {
+  display: flex;
+}
+.hero--section--img > img {
+  width: 100%;
+  height: 100%;
+}
+/* Hero Section Style Ends */
+
+/* About Us */
+.about--section {
+  display: grid;
+  padding: 133.3px 85.3px;
+  align-items: center;
+  gap: 114.6px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.about--section--img > img {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: block;
+  object-fit: cover;
+}
+/* About Us Ends */
+
+.section--title{
+  color: #000000;
+  font-weight: normal;
+  font-size: 25px;
+}
+
+.skills-section--heading{
+  color: orange;
+  font-weight: bold;
+  font-size: 40px;
+}
