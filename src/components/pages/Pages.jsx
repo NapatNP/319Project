@@ -4,18 +4,21 @@ import Home from "../common/home/Home";
 import About from "../common/about/About";
 import Login from "../common/signin/SignIn";
 import Team from "../common/team/Team";
+import Contact from "../common/contact/Contact";
+
 /* import { Router } from 'react-router-dom'; */
 
-const Pages = () => {
+function Pages() {
     return (
         <>
             <Header />
             <Home />
-            <About/>
-            <Login/>
-            <Team/>
+            <About />
+            <Login />
+            <Team />
+            <Contact />
         </>
-    )
+    );
 }
 
 export default Pages

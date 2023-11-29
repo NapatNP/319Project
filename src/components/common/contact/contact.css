@@ -1,0 +1,26 @@
+.contact{
+  display: flex;
+  padding: 110px 90px;
+
+  grid-template-columns: repeat(1fr, 1fr);
+  gap: 5rem;
+}
+
+
+.contact .left-contact .header span{
+  font-weight: bolder;
+  font-size: 30px;
+  height: 50px;
+}
+
+.contact .right-contact{
+  align-items: center;
+
+}
+
+.contact .right-contact .map{
+  width: 1000px;
+  height: 500px;
+
+
+}

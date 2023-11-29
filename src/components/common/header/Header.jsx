@@ -50,7 +50,7 @@ const Header = () => {
                         <li ><a href="/">หน้าหลัก</a></li>
                         <li><a href="/โครงการ">โครงการ</a></li>
                         <li><a href="/เกี่ยวกับเรา">เกี่ยวกับเรา</a></li>
-                        <li><a href="/ช่องทางติดต่อ">ช่องทางติดต่อ</a></li>
+                        <li><a href="#contact">ช่องทางติดต่อ</a></li>
                     </ul>
                     <button className="btn">
                         <i class='bx bx-log-in-circle'></i><p>Sign In</p>
