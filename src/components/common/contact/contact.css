@@ -1,4 +1,4 @@
-.contact{
+.contact {
   display: flex;
   padding: 110px 90px;
 
@@ -7,20 +7,38 @@
 }
 
 
-.contact .left-contact .header span{
+.contact .left-contact .header span {
   font-weight: bolder;
   font-size: 30px;
   height: 50px;
 }
 
-.contact .right-contact{
+.contact .right-contact {
   align-items: center;
 
 }
 
-.contact .right-contact .map{
+.contact .right-contact .map {
   width: 1000px;
   height: 500px;
 
-
 }
+
+.contact .left-contact image {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+}
+
+.icon-contact {
+  display: flex;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+.icon-contact p {
+  padding-top: 15px;
+  padding-left: 10px;
+}
+
