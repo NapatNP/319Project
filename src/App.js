@@ -2,12 +2,14 @@ import './App.css'; // css
 import Pages from "./components/pages/Pages"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import React from "react";
+import SignIn from "./components/common/signin/SignIn";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Pages />}></Route>
+        <Route path="/signin" element={<SignIn />}></Route>
         <Route path="*" element={<div>404 Not Found</div>}></Route>
       </Routes>
     </Router>

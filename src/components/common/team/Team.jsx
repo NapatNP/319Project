@@ -12,7 +12,7 @@ const Team = () => {
       <div className="team--section--container">
           <div className="team--section--card">
             <div className="team--section--img">
-              <img src="./images/image1.png"/>
+              <img src="./images/image1.png" alt="team1"/>
             </div>
             <div className="team--section--card--content">
               <h3 className="team--section--title">ศุภกิจติ์ แดงชาติ</h3>
@@ -22,7 +22,7 @@ const Team = () => {
 
           <div className="team--section--card">
             <div className="team--section--img">
-              <img src="./images/image1.png"/>
+              <img src="./images/image1.png" alt="team2"/>
             </div>
             <div className="team--section--card--content">
               <h3 className="team--section--title">ปฏิญญา จรูญชาต</h3>
@@ -32,7 +32,7 @@ const Team = () => {
 
           <div className="team--section--card">
             <div className="team--section--img">
-              <img src="./images/np.jpg"/>
+              <img src="./images/np.jpg" alt="team3"/>
             </div>
             <div className="team--section--card--content">
               <h3 className="team--section--title">ณภัทร ปิยะกุลวรศักดิ์</h3>
@@ -42,7 +42,7 @@ const Team = () => {
 
           <div className="team--section--card">
             <div className="team--section--img">
-              <img src="./images/pm.png"/>
+              <img src="./images/phuwadet.png" alt="team4"/>
             </div>
             <div className="team--section--card--content">
               <h3 className="team--section--title">ภูวเดช มิตรประชาชน</h3>
