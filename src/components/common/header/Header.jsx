@@ -43,13 +43,13 @@ const Header = () => {
 
             <div className="navbar">
                 <div className="logo">
-                    <h1><a href="index.html">Res <span>Q</span> connect</a></h1>
+                    <h1><a href="/">Res <span>Q</span> connect</a></h1>
                 </div>
                 <div className="button" >
                     <ul className="nav-links ">
-                        <li ><a href="/">หน้าหลัก</a></li>
-                        <li><a href="/โครงการ">โครงการ</a></li>
-                        <li><a href="/เกี่ยวกับเรา">เกี่ยวกับเรา</a></li>
+                        <li ><a href="#">หน้าหลัก</a></li>
+                        <li><a href="#โครงการ">โครงการ</a></li>
+                        <li><a href="#AboutMe">เกี่ยวกับเรา</a></li>
                         <li><a href="#contact">ช่องทางติดต่อ</a></li>
                     </ul>
                     <button className="btn">
