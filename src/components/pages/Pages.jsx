@@ -5,6 +5,7 @@ import About from "../common/about/About";
 import Login from "../common/signin/SignIn";
 import Team from "../common/team/Team";
 import Contact from "../common/contact/Contact";
+import Footer from "../common/footer/Footer";
 
 /* import { Router } from 'react-router-dom'; */
 
@@ -17,6 +18,7 @@ function Pages() {
             <Login />
             <Team />
             <Contact />
+            <Footer/>
         </>
     );
 }

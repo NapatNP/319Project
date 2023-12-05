@@ -62,13 +62,9 @@ const Contact = () => {
             </span>
             <p><span>รับสมัครนักศึกษา </span>02 407 3888 กด 1 </p>
           </div>
-
-
-
-
-
         </p>
       </div>
+      
       <div className="right-contact">
         <div id="map">
           <iframe className="map"

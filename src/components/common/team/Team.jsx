@@ -42,7 +42,7 @@ const Team = () => {
 
           <div className="team--section--card">
             <div className="team--section--img">
-              <img src="./images/pm.png"/>
+              <img src="./images/phuwadet.png"/>
             </div>
             <div className="team--section--card--content">
               <h3 className="team--section--title">ภูวเดช มิตรประชาชน</h3>
