@@ -1,8 +1,17 @@
 import './App.css'; // css
 import Pages from "./components/pages/Pages"
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React from "react";
 
 function App() {
-  return <><Pages /></>
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Pages />}></Route>
+        <Route path="*" element={<div>404 Not Found</div>}></Route>
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
