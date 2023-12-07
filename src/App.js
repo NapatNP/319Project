@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Pages from './components/pages/Pages';
-import Signin from './components/pages/Login'; // Import your Login component
+import Login from './components/pages/Login'; // Import your Login component
 import Register from './components/pages/Register';
 import Project from './components/pages/Project';
 
@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Pages />}></Route>
-        <Route path="/login" element={<Signin/>}></Route>
+        <Route path="/login" element={<Login/>}></Route>
         <Route path="/register" element={<Register/>}></Route>
         <Route path="/project" element={<Project/>}></Route>
       </Routes>

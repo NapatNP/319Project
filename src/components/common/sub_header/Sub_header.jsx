@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import './sub_header.css'
 
-const Sub_Header = () => {
+const SubHeader = () => {
     useEffect(() => {
         const handleClick = () => {
             let menuIcon = document.querySelector("#menu-icon");
@@ -19,9 +19,22 @@ const Sub_Header = () => {
     }, []);
     return (
         <header>
-            <div>Content</div>
-        </header> // ตรวจสอบว่ามีสัญลักษณ์ปิด JSX อยู่ที่นี่หรือไม่
+
+        <div className="navbar">
+            <div className="logo">
+                <h1><a href="/">Res <span>Q</span> connect</a></h1>
+            </div>
+            <div className="button" >
+                <ul className="nav-links ">
+                    <li ><a href="#home">หน้าหลัก</a></li>
+                    <li><a href="/project">โครงการ</a></li>
+                </ul>
+                <div id="menu-icon" class="bx bx-menu"></div>
+            </div>
+
+        </div>
+    </header>
     );
 }
 
-export default Sub_Header 
+export default SubHeader 

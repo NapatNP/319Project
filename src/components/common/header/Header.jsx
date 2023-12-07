@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
-import React, { useEffect } from "react";
 import './header.css'
 
 const Header = () => {
-    const navigate = useNavigate();
     useEffect(() => {
         const handleClick = () => {
             let menuIcon = document.querySelector("#menu-icon");
@@ -25,7 +23,6 @@ const Header = () => {
             <div className="navbar">
                 <div className="logo">
                     <h1><a href="/">Res <span>Q</span> connect</a></h1>
-                    <h1><a href="/">Res <span>Q</span> connect</a></h1>
                 </div>
                 <div className="button" >
                     <ul className="nav-links ">
@@ -34,13 +31,11 @@ const Header = () => {
                         <li><a href="#about">เกี่ยวกับเรา</a></li>
                         <li><a href="#contact">ช่องทางติดต่อ</a></li>
                     </ul>
-                    <button className="btn">
+                    <a href="/login" className="btn">
                         <i className='bx bx-log-in-circle'></i>
-                        <a href="/login">
-                            <p>Sign in</p>
-                        </a>
-                    </button>
-                    <div id="menu-icon" className="bx bx-menu"></div>
+                        Sign In
+                    </a>
+                    <div id="menu-icon" class="bx bx-menu"></div>
                 </div>
 
             </div>
