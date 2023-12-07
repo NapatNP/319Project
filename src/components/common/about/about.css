@@ -1,62 +1,11 @@
-/* about.css */
-.card {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    /* text-align: center; */
+/* about section */
+#about {
+  display: flex;
+  gap: 2rem;
+  padding: 8rem 2rem;
+}
 
-  }
-  
-  .image-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%; /* เพิ่มความสูงเต็มหน้าจอเพื่อให้รูปภาพเต็มกลาง */
-  }
-  
-  .profile-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    display: block;
-    object-fit: cover;
-    border: 5px solid #17a2b8; /* สีเส้นขอบรูปภาพ */
-
-  }
-
-  .card h1 {
-    text-align: center;
-    color: #333;
-  }
-  
-  .card-section {
-    margin-top: 20px;
-  }
-  
-  .card-section h2 {
-    color: #007BFF;
-  }
-  
-  .card-section p {
-    color: #555;
-  }
-  
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  ul li {
-    color: #555;
-  }
-  
-  footer {
-    margin-top: 20px;
-    text-align: center;
-    color: #888;
-  }
-  
+.about-img img {
+  margin-bottom: 2rem;
+  width: 500px;
+}

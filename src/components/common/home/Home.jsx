@@ -51,7 +51,7 @@ const Slideshow = () => {
 const Home = () => {
   return (
     <>
-      <section id="home">
+      <section id="home" className='container'>
         <div className="">
           <Slideshow />
         </div>

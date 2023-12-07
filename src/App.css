@@ -10,14 +10,30 @@ body {
   font-family: 'IBM Plex Sans Thai', sans-serif;
 }
 
-.navbar {
-  max-width: 80%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.container {
+  max-width: 1200px;
   margin: auto;
 }
 
+.text-center {
+  text-align: center;
+}
+
+.text-header {
+  padding: 2rem 0;
+  /* ด้านบนและด้านล่างคือ 10rem, ด้านซ้ายและด้านขวาคือ 0 */
+}
+
+.text-header p {
+  font-size: 15px;
+}
+
+.text-header h1 {
+  font-size: 35px;
+  color: orange;
+}
+
+/* navbar/header section */
 a {
   text-decoration: none;
   color: #000;
@@ -27,13 +43,16 @@ a {
 ul {
   list-style-type: none;
 }
+
 .button {
   display: flex;
   align-items: center;
 }
-.button #menu-icon{
+
+.button #menu-icon {
   margin-left: 30px;
 }
+
 .btn {
   border-radius: 5px;
   padding: 10px 20px;
@@ -48,7 +67,7 @@ ul {
   align-items: center;
 }
 
-.btn:hover{
+.btn:hover {
   background-color: rgb(218, 155, 39);
   transition: 0.5s;
 }
@@ -104,10 +123,6 @@ header h4 {
   font-weight: 500;
   margin-right: 20px;
 }
-.nav-links {
-  display: flex;
-  margin-right: 50px;
-}
 
 li {
   list-style: none;
@@ -153,12 +168,7 @@ li a {
 
 
 
-
-
-
-
-
-@media(max-width:1225px) {
+@media(max-width:1106px) {
   #menu-icon {
     display: block;
     transition: all .4s ease;
@@ -185,7 +195,7 @@ li a {
     top: 100%;
   }
 
-  .nav-links li a{
+  .nav-links li a {
     align-items: start;
     font-size: 25px;
     padding-bottom: 2px;

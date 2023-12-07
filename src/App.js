@@ -1,8 +1,21 @@
-import './App.css'; // css
-import Pages from "./components/pages/Pages"
+import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Pages from './components/pages/Pages';
+import Signin from './components/pages/Login'; // Import your Login component
+import Register from './components/pages/Register';
+import Project from './components/pages/Project';
 
 function App() {
-  return <><Pages /></>
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Pages />}></Route>
+        <Route path="/login" element={<Signin/>}></Route>
+        <Route path="/register" element={<Register/>}></Route>
+        <Route path="/project" element={<Project/>}></Route>
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;

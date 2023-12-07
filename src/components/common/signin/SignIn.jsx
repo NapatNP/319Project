@@ -1,6 +1,6 @@
 import React from "react";
 import './sighin.css'
-const login = () => {
+const sighin = () => {
     return (
         <div className="login-container">
             <img src="./logo512.png" alt="Your Name" className="login-image" />
@@ -17,4 +17,4 @@ const login = () => {
         </div>
     );
 };
-export default login
+export default sighin
