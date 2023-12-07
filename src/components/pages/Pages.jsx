@@ -8,7 +8,7 @@ import Footer from "../common/footer/Footer";
 import Contact from "../common/contact/Contact";
 /* import { Router } from 'react-router-dom'; */
 
-const Pages = () => {
+function Pages() {
     return (
         <>
             <Header />
@@ -19,7 +19,7 @@ const Pages = () => {
             <Contact/>
             <Footer/>
         </>
-    )
+    );
 }
 
 export default Pages
