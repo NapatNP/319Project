@@ -3,7 +3,31 @@
 * {
   padding: 0;
   margin: 0;
+  outline: none;
+  border: none;
   box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  height: 0;
+  width: .5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #555557;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: orange;
+  border-radius: 5rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
 }
 
 body {
@@ -25,12 +49,17 @@ body {
 }
 
 .text-header p {
-  font-size: 15px;
+  font-size: 15หpx;
 }
 
 .text-header h1 {
   font-size: 35px;
   color: orange;
+}
+
+.text-header h2 {
+  font-size: 19px;
+  font-weight: lighter;
 }
 
 /* navbar/header section */
@@ -124,6 +153,10 @@ header h4 {
   margin-right: 20px;
 }
 
+a {
+  text-decoration: none;
+}
+
 li {
   list-style: none;
   display: flex;
@@ -138,11 +171,26 @@ li a {
   padding-bottom: 0.75rem;
 }
 
-.text-header p{
+li a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  background-color: orange;
+  transition: all 0.3s ease;
+}
+
+li a:hover::after {
+  width: 70%;
+}
+
+.text-header p {
   font-size: 25px;
 }
 
-.text-header h1{
+.text-header h1 {
   font-size: 40px;
   color: orange;
 }

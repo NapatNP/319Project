@@ -26,7 +26,7 @@ const SubHeader = () => {
             </div>
             <div className="button" >
                 <ul className="nav-links ">
-                    <li ><a href="#home">หน้าหลัก</a></li>
+                    <li ><a href="/">หน้าหลัก</a></li>
                     <li><a href="/project">โครงการ</a></li>
                 </ul>
                 <div id="menu-icon" class="bx bx-menu"></div>

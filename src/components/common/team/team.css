@@ -25,30 +25,29 @@
 }
 
 .card {
-
     background: #fff;
     box-shadow: 0 0 32px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 5%;
 }
-
+.card:hover {
+    transform: translateY(-5px); /* ปรับการเคลื่อนไหวเมื่อ hover */
+    box-shadow: 0 6px 15px orange; /* เงาเมื่อ hover */
+}
 .team-img {
-    padding-top: 32px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
-    /* กำหนดให้มีรูปร่างเป็นวงกลม */
-    width: 150px;
-    height: 150px;
+    border-radius: 100%;
+    width: 160px;
+    height: 160px;
     overflow: hidden;
-    /* ซ่อนส่วนของรูปภาพที่เกินขอบวงกลม */
     margin: auto;
-    margin-top: 12px;
+    margin-top: 40px;
 }
 
 .team-img img {
-    width: 100%;
-    /* ปรับขนาดของรูปภาพให้เต็มพื้นที่ของ div */
-    height: 100%;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
 }
 

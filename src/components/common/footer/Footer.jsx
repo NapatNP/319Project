@@ -9,7 +9,7 @@ const Footer = () => {
                     <img src="./favicon.ico" alt="About Me" />
                 </div>
                 <div className="footer-right">
-                    <p>&copy; Res Q Connect ใช้เพื่อการศึกษาเพียงเท่านั้น | <a href="/">หน้าหลัก</a> | <a href="#project">โครงการ</a> | <a href="#AboutMe">เกี่ยวกับเรา</a> | <a href="#contact">ช่องทางติดต่อ</a></p>
+                    <p>&copy; Res Q Connect ใช้เพื่อการศึกษาเพียงเท่านั้น | <a href="#home">หน้าหลัก</a> | <a href="#project">โครงการ</a> | <a href="#about">เกี่ยวกับเรา</a> | <a href="#contact">ช่องทางติดต่อ</a></p>
                 </div>
             </div>
         </section>
