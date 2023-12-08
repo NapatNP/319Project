@@ -1,0 +1,17 @@
+.project-sub-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+}
+.sub-project-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    display: grid;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 42.6px;
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 2rem;
+}

@@ -1,16 +1,15 @@
 import React from "react";
 import Footer from "../common/footer/Footer";
 import SubHeader from "../common/sub_header/Sub_header";
-import Miniproject from "../common/content/Content";
-
-function Content() {
+import SubProject from "../common/sub_project/Sub_project";
+const Project2 = () => {
     return (
         <>
-            <SubHeader />
-            <Miniproject/>
+            <SubHeader/>
+            <SubProject/>
             <Footer/>
         </>
-    );
+    )
 }
 
-export default Content
+export default Project2

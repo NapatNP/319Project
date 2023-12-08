@@ -1,0 +1,57 @@
+#mini-project {
+    display: flex;
+    gap: 2rem;
+    padding: 8rem 2rem;
+}
+ 
+.mini-sub-header {
+    align-items: center;
+}
+ 
+#mini-project .date {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0.5rem 0;
+}
+ 
+.project-img-content {
+    width: 100%;
+    height: auto;
+}
+ 
+.left {
+    flex: 1;
+}
+ 
+.mini-sub-card {
+    width: 100%; /* Set the width to 100% */
+    max-width: 600px; /* Set a maximum width if needed */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+ 
+.type-project {
+    padding: 0.5rem 1rem;
+}
+ 
+.mini-sub-card h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ffa201;
+    padding-bottom: 8px;
+}
+ 
+.mini-sub-card p {
+    font-size: 16px;
+    color: #555;
+}
+ 
+.button-mini-sub{
+    padding: 20px;
+}
