@@ -1,7 +1,21 @@
-/* signin.css */
-
 #login {
-  padding: 8rem 2rem;
+  padding: 8rem 0;
+}
+
+.login-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 650px;
 }
 
 .login-image {
@@ -11,11 +25,10 @@
   margin: 0 auto 20px;
   display: block;
   object-fit: cover;
-  border: 5px solid #17b888;
-  /* สีเส้นขอบรูปภาพ */
+  /* border: 5px solid orange; */
 }
 
-.login-container h1 {
+.login-card h1 {
   text-align: center;
 }
 
@@ -46,18 +59,18 @@ button:hover {
   background-color: #45a049;
 }
 
-.regis-btn{
- color: black;
- background-color: orange;
- margin-top: 5px;
- text-align: center;
- border-radius: 4px;
+.regis-btn {
+  color: black;
+  background-color: orange;
+  margin-top: 5px;
+  text-align: center;
+  border-radius: 4px;
 }
 
-#username{
- background-color: lightgray;
+#username {
+  background-color: lightgray;
 }
 
-#password{
+#password {
   background-color: lightgray;
 }
