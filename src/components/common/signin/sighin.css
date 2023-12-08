@@ -45,3 +45,19 @@ button {
 button:hover {
   background-color: #45a049;
 }
+
+.regis-btn{
+ color: black;
+ background-color: orange;
+ margin-top: 5px;
+ text-align: center;
+ border-radius: 4px;
+}
+
+#username{
+ background-color: lightgray;
+}
+
+#password{
+  background-color: lightgray;
+}

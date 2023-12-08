@@ -14,6 +14,9 @@ const sighin = () => {
                     <input type="password" id="password" name="password" />
 
                     <button type="submit">Login</button>
+                    <a href="/register" className="regis-btn">
+                        Register
+                    </a>
                 </form>
             </div>
         </div>
