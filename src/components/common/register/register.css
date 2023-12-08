@@ -1,0 +1,97 @@
+.regis-card {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    /* background-color: orange; */
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+.regis-left,
+.regis-right {
+    flex: 1;
+    align-items: center;
+}
+
+.regis-left h4{
+    margin-bottom: 0rem;
+}
+
+.regis-right input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+.bbbb,
+.aaaa{
+    padding-left: 30px;
+}
+
+.select-wrapper {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0;
+    width: 10rem;
+    
+}
+
+.cat{
+    margin-bottom: px;
+}
+.padding2{
+    padding: 1rem 0;
+}
+
+select {
+    width: calc(100% - 22px);
+    padding: 8px;
+    box-sizing: border-box;
+    float: left;
+}
+
+#submit-btt {
+    background-color: orange;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submit-btt:hover {
+    background-color: orange;
+}
+
+.regis-card input {
+    background-color: lightgray;
+    border-radius: 5px;
+    width: 700px;
+}
+.regis-card li{
+    justify-content: space-between;
+}
+
+.regis-card .aaaa{
+    justify-content: flex-start;
+    gap: 10.7rem;
+}
+
+.regis-card .bbbb{
+    justify-content: flex-start;
+    gap: 10rem;
+}
