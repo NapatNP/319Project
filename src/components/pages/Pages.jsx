@@ -6,6 +6,7 @@ import Highlight from "../common/highlight/Highlight";
 import Team from "../common/team/Team";
 import Footer from "../common/footer/Footer";
 import Contact from "../common/contact/Contact";
+import Project from "../common/project/Project";
 /* import { Router } from 'react-router-dom'; */
 
 function Pages() {
@@ -15,6 +16,7 @@ function Pages() {
             <Home />
             <About/>
             <Highlight/>
+            <Project/>
             <Team/>
             <Contact/>
             <Footer/>
