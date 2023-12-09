@@ -1,14 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './pay.css'
-import data from "../../data/project.json";
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 const Pay = () => {
-    const { amount } = useParams();
+    const { money } = useParams(); // รับค่า money จาก URL parameter
+    const amount = parseInt(money);
+    const navigate = useNavigate();
 
-    useEffect(() => {
-        console.log('Amount:', amount);
-    }, []);
+
+    // ตรวจสอบการแสดงค่าใน console.log เพื่อตรวจสอบว่ารับค่า money มาได้ถูกต้องหรือไม่
+    console.log('Money:', money);
+    console.log('Amount:', amount);
+
 
     const [selectedButton, setSelectedButton] = useState({
         creditCard: false,
@@ -19,6 +22,18 @@ const Pay = () => {
     const handleButtonClick = (button) => {
         setSelectedButton({ ...selectedButton, [button]: !selectedButton[button] });
     };
+
+    const handlePayment = () => {
+        const paymentSuccess = true;
+
+        if (paymentSuccess) {
+            alert("ชำระเงินเรียบร้อยแล้ว!");
+            navigate("/");
+        } else {
+            console.log("การชำระเงินไม่สำเร็จ");
+        }
+    };
+
     const Icircle = {
         fontSize: '10px',
     };
@@ -94,7 +109,9 @@ const Pay = () => {
                                 <h5>บาท</h5>
                             </div>
                         </div>
-                        <button className='btn'>ชำระเงิน</button>
+                        <button className='btn' onClick={handlePayment}>
+                            ชำระเงิน
+                        </button>
                     </div>
                 </div>
             </div>
