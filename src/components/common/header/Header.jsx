@@ -35,7 +35,7 @@ const Header = () => {
                         <i className='bx bx-log-in-circle'></i>
                         Sign In
                     </a>
-                    <div id="menu-icon" class="bx bx-menu"></div>
+                    <div id="menu-icon" className="bx bx-menu"></div>
                 </div>
 
             </div>

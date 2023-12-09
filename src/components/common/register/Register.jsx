@@ -1,10 +1,120 @@
 // Register.js
-import React from "react";
+import React, { useState } from 'react';
 //import { Link } from "react-router-dom";
 import './register.css'
-<script src="form_validation.js"></script>
 
 const Register = () => {
+    const [formData, setFormData] = useState({
+        category: 'Default',
+        prefix: 'Default',
+        name: '',
+        lastname: '',
+        id: '',
+        address: '',
+        tel: '',
+        email: '',
+        passid: '',
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;  
+        
+        // Check if the selected value is "Default" and prevent setting it in the state
+        if (value !== 'Default') {
+          setFormData((prevData) => ({ ...prevData, [name]: value }));
+        }
+      };
+
+      const handleSubmit = async (e) => {
+        e.preventDefault();
+    
+        // Validate form data
+        if (formValidation()) {
+          try {
+            const response = await fetch('http://localhost:3001/api/register', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(formData),
+            });
+    
+            if (response.ok) {
+              alert('Registration successful');
+            } else {
+              alert('Registration failed');
+            }
+          } catch (error) {
+            console.error('Error:', error);
+          }
+        } else {
+          alert('Validation failed. Please check your inputs.');
+        }
+      };
+    
+    const formValidation = () => {
+        console.log('Form Data:', formData);
+        // Validate 'category'
+        if (formData.category === 'Default') {
+            alert('Please select a category');
+            return false;
+        }
+
+        // Validate 'prefix'
+        if (formData.prefix === 'Default') {
+            alert('Please select a prefix');
+            return false;
+        }
+
+        // Validate 'name'
+        if (!formData.name.trim()) {
+            alert('Name cannot be empty');
+            return false;
+        }
+
+        // Validate 'lastname'
+        if (!formData.lastname.trim()) {
+            alert('Lastname cannot be empty');
+            return false;
+        }
+
+        // Validate 'id'
+        if (!formData.id.trim()) {
+            alert('ID cannot be empty');
+            return false;
+        }
+
+        // Validate 'address'
+        if (!formData.address.trim()) {
+            alert('Address cannot be empty');
+            return false;
+        }
+
+        // Validate 'tel'
+        if (!formData.tel.trim()) {
+            alert('Telephone cannot be empty');
+            return false;
+        }
+
+        // Validate 'email'
+        const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (!formData.email.match(emailRegex)) {
+            alert('Invalid email address');
+            return false;
+        }
+
+        // Validate 'passid'
+        if (formData.passid.trim().length < 5 || formData.passid.trim().length > 12) {
+            alert('Password should be between 5 to 12 characters');
+            return false;
+        }
+
+        // Add more validation rules as needed
+
+        // If all validations pass, return true
+        return true;
+    };
+
     return (
         <>
             {/* <div> */}
@@ -12,19 +122,20 @@ const Register = () => {
             {/*             <p>Already have an account? <Link to="/login">Login here</Link></p>
         </div> */}
             <section conload="document.registration.userid.focus();">
-                <div class="container text-center">
-                    <div class="regis-card">
+                <div className="container text-center">
+                    <div className="regis-card">
                         <div className="card-header bg-info">
                             <h1 style={{ borderBottom: '1px solid black', paddingBottom: '5px' }}>สมัครสมาชิก</h1>
                         </div>
-                        <div class="card-body">
-                            <form name='registration' onSubmit="return formValidation();">
+                        <div className="card-body">
+                            <form name='registration'>
                                 <ul>
                                     <li className="aaaa">
-                                        <label for="ประเภท">ประเภท:</label>
-                                        <div class="select-wrapper">
-                                            <select class="cat" name="category">
-                                                <option selected="" value="Default">(กรุณาเลือก)</option>
+                                        <label htmlFor="category">ประเภท:</label>
+                                        <div className="select-wrapper">
+                                            <select className="cat" name="category" id="category" value={formData.category} onChange={handleChange}>
+                                                {/* <option selected="" value="Default">(กรุณาเลือก)</option> */}
+                                                <option value="Default">(กรุณาเลือก)</option>
                                                 <option value="บุคคลธรรมดา">บุคคลธรรมดา</option>
                                                 <option value="บริษัทจำกัด">บริษัทจำกัด</option>
                                                 <option value="บริษัทมหาชนจำกัด">บริษัทมหาชนจำกัด</option>
@@ -46,9 +157,9 @@ const Register = () => {
 
                                 <ul>
                                     <li className="bbbb">
-                                        <label for="คำนำหน้า">คำนำหน้า:</label>
-                                        <div class="select-wrapper">
-                                            <select class="mb-2" name="prefix">
+                                        <label htmlFor="prefix">คำนำหน้า:</label>
+                                        <div className="select-wrapper">
+                                            <select className="mb-2" name="prefix" id="prefix" value={formData.prefix} onChange={handleChange}>
                                                 <option selected="" value="Default">(กรุณาเลือก)</option>
                                                 <option value="นาย">นาย</option>
                                                 <option value="นาง">นาง</option>
@@ -59,16 +170,16 @@ const Register = () => {
                                     </li>
                                 </ul>
 
-                                <li><label for="name">ชื่อ</label>
-                                    <input type="text" name="name" size="12" id="name" />
+                                <li><label htmlFor="name">ชื่อ</label>
+                                    <input type="text" name="name" size="12" id="name" onChange={handleChange} />
                                 </li>
 
-                                <li><label for="lastname">นามสกุล:</label>
-                                    <input type="text" name="lastname" size="50" id="lastname" />
+                                <li><label htmlFor="lastname">นามสกุล:</label>
+                                    <input type="text" name="lastname" size="50" id="lastname" onChange={handleChange} />
                                 </li>
 
-                                <li><label for="lastname">เลขประจำตัวผู้เสียภาษี:</label>
-                                    <input type="text" name="lastname" size="50" id="id" />
+                                <li><label htmlFor="id">เลขประจำตัวผู้เสียภาษี:</label>
+                                    <input type="text" name="id" size="50" id="id" onChange={handleChange} />
                                 </li>
 
                                 {/* <div class="col-lg-8 col-md-8 pl-4">                        
@@ -94,20 +205,20 @@ const Register = () => {
                                     </input>               
                                 </div> */}
 
-                                <li><label for="address">ที่อยู่:</label>
-                                    <input type="text" name="address" size="50" id="address" />
+                                <li><label htmlFor="address">ที่อยู่:</label>
+                                    <input type="text" name="address" size="50" id="address" onChange={handleChange} />
                                 </li>
 
-                                <li><label for="tel">เบอร์โทรศัพท์:</label>
-                                    <input type="text" name="tel" size="50" id="tel" />
+                                <li><label htmlFor="tel">เบอร์โทรศัพท์:</label>
+                                    <input type="text" name="tel" size="50" id="tel" onChange={handleChange} />
                                 </li>
 
-                                <li><label for="email">อีเมล</label>
-                                    <input type="text" name="email" size="50" id="email" />
+                                <li><label htmlFor="email">อีเมล</label>
+                                    <input type="text" name="email" size="50" id="email" onChange={handleChange} />
                                 </li>
 
-                                <li><label for="passid">ตั้งค่ารหัสผ่าน</label>
-                                    <input type="password" name="passid" size="12" id="passid" />
+                                <li><label htmlFor="passid">ตั้งค่ารหัสผ่าน</label>
+                                    <input type="password" name="passid" size="12" id="passid" onChange={handleChange} />
                                 </li>
 
                                 {/* <li><label for="desc">About:</label></li>
@@ -115,7 +226,7 @@ const Register = () => {
                                 <li><input class="btn btn-primary btn-lg" type="submit" name="submit" value="Submit" /></li> */}
                             </form>
                         </div>
-                        <button type="submit" id="submit-btt">สมัครสมาชิก</button>
+                        <button type="submit" id="submit-btt" onClick={handleSubmit}>สมัครสมาชิก</button>
                     </div>
                 </div>
             </section>
