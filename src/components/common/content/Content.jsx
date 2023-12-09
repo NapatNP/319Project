@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import './content.css'
 import data from "../../data/project.json";
 import { useParams } from 'react-router-dom';
+
 const Content = () => {
+    const navigate = useNavigate(); 
     const { projectId } = useParams();
     const itemId = parseInt(projectId, 10);
     const item = data.projects.find(item => item.id === itemId);
-    console.log("ID from URL:", itemId);
-    console.log("ID from data.db:", item);
+    const [donationAmount, setDonationAmount] = useState("");
     const myImage = item.src;
+
     if (!item) {
         return <div>ไม่พบข้อมูลโครงการ</div>;
     }
@@ -23,6 +26,19 @@ const Content = () => {
     const iStyle = {
         fontSize: '35px',
         color: 'orange',
+    };
+    const handleDonation = (amount) => {
+        // กำหนดค่าจำนวนเงินที่ต้องการบริจาค
+        setDonationAmount(amount);
+    };
+
+    const handleDonateSubmit = () => {
+        if (donationAmount === "") {
+            alert("กรุณาระบุจำนวนเงินก่อน");
+        } else {
+            // ส่งค่าเงินที่ใส่ไปยังหน้า Pay
+            navigate(`/paytation?amount=${donationAmount}`);
+        }
     };
 
     return (
@@ -51,32 +67,37 @@ const Content = () => {
                 <div className="right">
                     <div className="mini-sub-card" id='project_1' style={{ display: item.type === 'project_1' ? 'block' : 'none' }}>
                         <h2 className='text-center'>ร่วมบริจาคให้กับโครงการ</h2>
-                        <div className='button-mini-sub'>
-                            <div className='container'>
-                                <button className='button-price'>
+                        <div className=''>
+                            <div className='btnn'>
+                                <button className='button-price' onClick={() => handleDonation(500)}>
                                     500
                                 </button>
-                                <button className='button-price'>
+                                <button className='button-price' onClick={() => handleDonation(1000)}>
                                     1000
                                 </button>
-                                <button className='button-price'>
+                                <button className='button-price' onClick={() => handleDonation(1500)}>
                                     1500
                                 </button>
-                                <button className='button-price'>
+                                <button className='button-price' onClick={() => handleDonation(2000)}>
                                     2000
                                 </button>
-                                <button className='button-price'>
-                                    3000
+                                <button className='button-price' onClick={() => handleDonation(2500)}>
+                                    2500
                                 </button>
-                                <button className='button-price'>
-                                    5000
+                                <button className='button-price' onClick={() => handleDonation(3000)}>
+                                    3000
                                 </button>
                             </div>
                             <div>
-                                <input type='number' className='sum-money' placeholder='ระบุจำนวนเงิน'
-                                ></input>
+                                <input
+                                    type='number'
+                                    className='sum-money'
+                                    placeholder='ระบุจำนวนเงิน'
+                                    value={donationAmount}
+                                    onChange={(e) => setDonationAmount(e.target.value)}
+                                />
                                 <h1>**ยอดบริจาคขั้นต่ำเพื่อออกใบเสร็จ 100 บาท**</h1>
-                                <button type='submit' className='button-sumbit' >
+                                <button type='submit' className='button-sumbit' onClick={handleDonateSubmit}>
                                     บริจาคเลย
                                 </button>
                             </div>

@@ -1,5 +1,68 @@
 #pay {
+    padding: 8rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paying {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.pay-card {
     display: flex;
     gap: 2rem;
-    padding: 8rem 2rem;
+    width: 100%;
+    /* Set the width to 100% */
+    max-width: 600px;
+    /* Set a maximum width if needed */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.pay-card h1 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ffa201;
+    padding-bottom: 8px;
+}
+
+.p-left, .p-right {
+    flex: 1;
+    padding: 3rem 2rem;
+}
+
+.p-left {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    border: 1px solid rgb(226, 226, 226);
+}
+
+.pay-btn .btn {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid black;
+    color: black;
+    width: 400px;
+    margin: 1rem 0;
+    padding: 0.5rem;
+    gap: 1rem; /* Add a gap between icon and text */
+}
+
+.pay-btn i {
+    padding: 0.5rem;
+}
+
+.pay-btn .bxs-check-circle {
+    margin-left: auto;
 }

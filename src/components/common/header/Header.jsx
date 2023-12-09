@@ -31,10 +31,7 @@ const Header = () => {
                         <li><a href="#about">เกี่ยวกับเรา</a></li>
                         <li><a href="#contact">ช่องทางติดต่อ</a></li>
                     </ul>
-                    <a href="/login" className="btn">
-                        <i className='bx bx-log-in-circle'></i>
-                        Sign In
-                    </a>
+                    
                     <div id="menu-icon" className="bx bx-menu"></div>
                 </div>
 
