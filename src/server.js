@@ -6,7 +6,7 @@ const cors = require('cors');
 const app = express();
 const PORT = 3001;
 
-app.use(cors()); // เพิ่มนี้
+app.use(cors({origin: 'http://localhost:3000'}));
 app.use(bodyParser.json());
 
 mongoose.connect('mongodb+srv://resQ:resQmongo@cluster1.6m6nsty.mongodb.net/?retryWrites=true&w=majority', {
@@ -37,6 +37,28 @@ app.post('/api/register', async (req, res) => {
   } catch (error) {
     console.error('Error:', error);
     res.status(500).json({ message: 'Registration failed' });
+  }
+});
+
+app.post('/api/login', async (req, res) => {
+  console.log('Request Body:', req.body);
+  const { email, password } = req.body;
+
+  try {
+    // ตรวจสอบว่ามีผู้ใช้ใน MongoDB ที่มี email และ password ตรงกับที่รับมา
+    const user = await User.findOne({ email, passid: password });
+    console.log('User:', user);
+
+    if (user) {
+      // ถ้ามีผู้ใช้, ส่งข้อมูลกลับไปยัง client
+      res.status(200).json({ message: 'Login successful' });
+    } else {
+      // ถ้าไม่พบผู้ใช้, ส่งข้อความว่า Login failed
+      res.status(401).json({ message: 'Login failed' });
+    }
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(500).json({ message: 'Internal server error' });
   }
 });
 
