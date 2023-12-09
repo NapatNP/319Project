@@ -11,17 +11,17 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Pages />}></Route>
-        <Route path="/login" element={<Login/>}></Route>
-        <Route path="/register" element={<Register/>}></Route>
-        <Route path="/project" element={<Project/>}></Route>
-        <Route path="/project1" element={<Content/>}></Route>
-        <Route path='/paytation' element={<Pay/>}></Route>
-
+        <Route path="/" element={<Pages />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/projects" element={<Project />} />
+        <Route path="/:projectId" element={<Content />} />
+        <Route path="/paytation" element={<Pay />} />
       </Routes>
     </Router>
   );
 }
+
 
 export default App;
 

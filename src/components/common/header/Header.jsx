@@ -27,7 +27,7 @@ const Header = () => {
                 <div className="button" >
                     <ul className="nav-links ">
                         <li ><a href="#home">หน้าหลัก</a></li>
-                        <li><a href="/project">โครงการ</a></li>
+                        <li><a href="/projects">โครงการ</a></li>
                         <li><a href="#about">เกี่ยวกับเรา</a></li>
                         <li><a href="#contact">ช่องทางติดต่อ</a></li>
                     </ul>
