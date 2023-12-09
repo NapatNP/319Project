@@ -62,6 +62,18 @@ app.post('/api/login', async (req, res) => {
   }
 });
 
+// เพิ่ม Endpoint สำหรับดึงข้อมูลผู้ใช้
+app.get('/api/user', async (req, res) => {
+  try {
+    // ดึงข้อมูลผู้ใช้จาก MongoDB และส่งกลับไปยัง client
+    const users = await User.find();
+    res.status(200).json(users);
+  } catch (error) {
+    console.error('Error:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });

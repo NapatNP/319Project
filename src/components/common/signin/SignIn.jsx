@@ -40,7 +40,7 @@ const Sighin = () => {
       if (response.ok) {
         // Successfully logged in
         alert('Sign in Success');
-        navigate('/'); // Redirect to dashboard after successful login
+        navigate('/dashboard'); // Redirect to dashboard after successful login
       } else {
         // Invalid email or password
         alert('Invalid Email/Password');

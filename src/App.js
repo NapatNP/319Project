@@ -6,6 +6,7 @@ import Register from './components/pages/Register';
 import Project from './components/pages/Project';
 import Pay from './components/pages/Pay';
 import Content from './components/pages/Content';
+import Dash from './components/pages/Dashbord';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/project" element={<Project/>}></Route>
         <Route path="/project1" element={<Content/>}></Route>
         <Route path='/paytation' element={<Pay/>}></Route>
+        <Route path="/dashboard" element={<Dash/>}></Route>
 
       </Routes>
     </Router>

@@ -102,7 +102,7 @@ const Register = () => {
         }
 
         // Validate 'email'
-        const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!formData.email.match(emailRegex)) {
             alert('Invalid email address');
             return false;
