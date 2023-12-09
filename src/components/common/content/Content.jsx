@@ -36,8 +36,8 @@ const Content = () => {
         if (donationAmount === "") {
             alert("กรุณาระบุจำนวนเงินก่อน");
         } else {
-            // ส่งค่าเงินที่ใส่ไปยังหน้า Pay
-            navigate(`/paytation?amount=${donationAmount}`);
+            // Pass the donationAmount to the Pay component through the URL
+            navigate(`/paytation?money=${donationAmount}`);
         }
     };
 

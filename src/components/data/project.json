@@ -136,13 +136,26 @@
         "description": "พัฒนาศูนย์เด็กเป็นกิจกรรมที่มุ่งเน้นการสนับสนุนและพัฒนาเด็กที่อยู่ในชุมชน โดยมีจิตอาสาเป็นผู้ร่วมมือกับองค์กรหรือหน่วยงานที่เกี่ยวข้อง กิจกรรมทางจิตอาสานี้มีวัตถุประสงค์ในการส่งเสริมการเรียนรู้และพัฒนาทักษะ ..."
       }
     ],
-    "portfolio": [
+    "amounts": [
       {
-        "id": "1",
-        "src": "./img/placeholder-image.png",
-        "title": "Ahuse",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspenmdisse varius eim in eros elementum tristique",
-        "link": "View In Github"
+        "id": 1,
+        "money": 500
+      },
+      {
+        "id": 2,
+        "money": 1000
+      },
+      {
+        "id": 3,
+        "money": 1500
+      },
+      {
+        "id": 4,
+        "money": 2000
+      },
+      {
+        "id": 5,
+        "money": 3000
       }
     ]
   }
