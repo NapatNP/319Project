@@ -1,9 +1,11 @@
 // Register.js
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 //import { Link } from "react-router-dom";
 import './register.css'
 
 const Register = () => {
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         category: 'Default',
         prefix: 'Default',
@@ -17,41 +19,44 @@ const Register = () => {
     });
 
     const handleChange = (e) => {
-        const { name, value } = e.target;  
-        
+        const { name, value } = e.target;
+
         // Check if the selected value is "Default" and prevent setting it in the state
         if (value !== 'Default') {
-          setFormData((prevData) => ({ ...prevData, [name]: value }));
+            setFormData((prevData) => ({ ...prevData, [name]: value }));
         }
-      };
+    };
 
-      const handleSubmit = async (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-    
+
         // Validate form data
         if (formValidation()) {
-          try {
-            const response = await fetch('http://localhost:3001/api/register', {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              body: JSON.stringify(formData),
-            });
-    
-            if (response.ok) {
-              alert('Registration successful');
-            } else {
-              alert('Registration failed');
+            try {
+                const response = await fetch('http://localhost:3001/api/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                });
+
+                if (response.ok) {
+                    alert('Registration successful');
+                    // Redirect to Login page
+                    navigate('/login');
+
+                } else {
+                    alert('Registration failed');
+                }
+            } catch (error) {
+                console.error('Error:', error);
             }
-          } catch (error) {
-            console.error('Error:', error);
-          }
         } else {
-          alert('Validation failed. Please check your inputs.');
+            alert('Validation failed. Please check your inputs.');
         }
-      };
-    
+    };
+
     const formValidation = () => {
         console.log('Form Data:', formData);
         // Validate 'category'
