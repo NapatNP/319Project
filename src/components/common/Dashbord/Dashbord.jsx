@@ -1,6 +1,8 @@
-// ตัวอย่างการแก้ไขใน Dashboard.jsx
+// Dashboard.jsx
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import './dashbord.css';
+
 
 const Dashboard = () => {
     const navigate = useNavigate();
@@ -13,7 +15,6 @@ const Dashboard = () => {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
-                        // ส่ง Token หรือข้อมูลการตรวจสอบต่าง ๆ ที่คุณต้องการใส่
                     },
                 });
 
@@ -45,12 +46,16 @@ const Dashboard = () => {
 
             <div className="dashboard-content container" >
                 <h1>Welcome to the Dashboard</h1>
-                {userData && userData.map((user) => (
-                    <div key={user._id} className="user-info">
-                        <p>Name: {user.name}</p>
-                        <p>Email: {user.email}</p>
-                    </div>
-                ))}
+                <div className="user-cards">
+                    {userData && userData.map((user) => (
+                        <div key={user._id} className="user-card">
+                            <div className="card-content">
+                                <p>Name: {user.name}</p>
+                                <p>Email: {user.email}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
                 <button onClick={handleLogout}>Log Out</button>
             </div>
         </header>
