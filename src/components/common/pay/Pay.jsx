@@ -105,7 +105,7 @@ const Pay = () => {
                             <h4>สรุปรายการ</h4>
                             <div className='type-project'>
                                 <h4><i class='bx bxs-circle' style={Icircle}></i> ยอดบริจาค </h4>
-                                <h5>{amount}</h5>
+                                <h5>1500</h5>
                                 <h5>บาท</h5>
                             </div>
                         </div>

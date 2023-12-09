@@ -43,7 +43,7 @@ const Dashboard = () => {
                 </div>
             </div>
 
-            <div className="dashboard-content">
+            <div className="dashboard-content container" >
                 <h1>Welcome to the Dashboard</h1>
                 {userData && userData.map((user) => (
                     <div key={user._id} className="user-info">
