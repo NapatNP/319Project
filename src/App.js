@@ -20,6 +20,12 @@ function App() {
         <Route path='/paytation' element={<Pay/>}></Route>
         <Route path="/dashboard" element={<Dash/>}></Route>
 
+        <Route path="/" element={<Pages />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/projects" element={<Project />} />
+        <Route path="/:projectId" element={<Content />} />
+        <Route path="/paytation" element={<Pay />} />
       </Routes>
     </Router>
   );
