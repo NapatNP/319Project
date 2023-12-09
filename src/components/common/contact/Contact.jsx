@@ -37,7 +37,7 @@ const Contact = () => {
                 <div className="sub-content">
                     <div>
                         <span style={iconStyle}>
-                            <i class='bx bx-phone' style={iStyle}></i>
+                            <i className='bx bx-phone' style={iStyle}></i>
                         </span>
                     </div>
                     <div>
@@ -47,7 +47,7 @@ const Contact = () => {
                 <div className="sub-content">
                     <div>
                         <span style={iconStyle}>
-                            <i class='bx bx-printer' style={iStyle}></i>
+                            <i className='bx bx-printer' style={iStyle}></i>
                         </span>
                     </div>
                     <div>
@@ -57,7 +57,7 @@ const Contact = () => {
                 <div className="sub-content">
                     <div>
                         <span style={iconStyle}>
-                            <i class='bx bx-envelope' style={iStyle}></i>
+                            <i className='bx bx-envelope' style={iStyle}></i>
                         </span>
                     </div>
                     <div>
@@ -67,7 +67,7 @@ const Contact = () => {
                 <div className="sub-content">
                     <div>
                         <span style={iconStyle}>
-                            <i class='bx bx-pen' style={iStyle}></i>
+                            <i className='bx bx-pen' style={iStyle}></i>
                         </span>
                     </div>
                     <div>

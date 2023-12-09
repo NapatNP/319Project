@@ -19,7 +19,7 @@ const Content = () => {
                     <div className='mini-sub-header'>
                         <h1>โครงการบริจาคก่อสร้างอาคารผู้ป่วย</h1>
                         <div className='date'>
-                            <i class='bx bxs-calendar' style={iStyle}></i>
+                            <i className='bx bxs-calendar' style={iStyle}></i>
                             <p>18/02/2022 - 06/12/2023</p>
                         </div>
                     </div>
